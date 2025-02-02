@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/luiz-barros-92/Estudos-Node.js/issues"
   },
-  "homepage": "https://github.com/luiz-barros-92/Estudos-Node.js#readme"
+  "homepage": "https://github.com/luiz-barros-92/Estudos-Node.js#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
