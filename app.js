@@ -1,4 +1,5 @@
 import express from 'express';
+import msgFunction from './mod_01.js';
 
 var app = express();
 
@@ -21,5 +22,5 @@ app.get('/linux', function(req, res){
 })
 
 app.listen(3000, function(){
-    console.log("Servidor online com Express")
+    console.log(msgFunction());
 });
