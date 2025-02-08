@@ -1,20 +1,16 @@
 import app from './config/server.js';
 
-app.get('/', function(req, res){
-    res.render("home/inicio");
-})
+import rotaHome from './app/routes/home.js';
+rotaHome(app);
 
-app.get('/projetos', function(req, res){
-    res.render("projetos/projetos");
-})
+import rotaTutoriais from './app/routes/tutoriais.js';
+rotaTutoriais(app);
 
-app.get('/tutoriais', function(req, res){
-    res.render("tutoriais/tutoriais");
-})
+import rotaProjetos from './app/routes/projetos.js';
+rotaProjetos(app);
 
-app.get('/linux', function(req, res){
-    res.render("linux/linux");
-})
+import rotaLinux from './app/routes/linux.js';
+rotaLinux(app);
 
 app.listen(3000, function(){
     console.log('Servidor Online!');
