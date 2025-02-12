@@ -1,7 +1,7 @@
+import mysql from 'mysql2';
 export default function(app){
 
-    app.get('/projetos', function(req, res){
-    var mysql = require('mysql2');
+    app.get('/projetos', function(req, res){    
 
     var connection = mysql.createConnection({
         host : '127.0.0.1',
