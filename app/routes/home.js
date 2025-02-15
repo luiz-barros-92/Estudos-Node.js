@@ -7,7 +7,7 @@ export default function(app){
     app.get('/', function(req, res){
         
         connection.query('select * from inicio', function(error, result){
-            res.render("home/inicio", {projetos : result});
+            res.render("home/inicio", {inicio : result});
         });
     });
 };

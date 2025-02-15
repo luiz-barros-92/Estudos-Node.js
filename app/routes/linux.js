@@ -7,7 +7,7 @@ export default function(app){
     app.get('/linux', function(req, res){
 
         connection.query('select * from linux', function(error, result){
-            res.render("linux/linux", {projetos : result});
+            res.render("linux/linux", {linux: result});
         });
     });
 };
