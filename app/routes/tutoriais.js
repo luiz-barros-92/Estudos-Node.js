@@ -1,5 +1,13 @@
+import dbConnection from '../../config/dbConnection.js';
+
 export default function(app){
+
+    var connection = dbConnection();
+    
     app.get('/tutoriais', function(req, res){
-        res.render("tutoriais/tutoriais");
+        
+        connection.query('select * from tutoriais', function(error, result){
+            res.render("tutoriais/tutoriais", {projetos : result});
+        });
     });
 };
