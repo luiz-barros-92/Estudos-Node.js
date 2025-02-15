@@ -1,14 +1,10 @@
-import mysql from 'mysql2';
+import dbConnection from '../../config/dbConnection.js';
+
 export default function(app){
 
-    app.get('/projetos', function(req, res){
+    var connection = dbConnection();
 
-        var connection = mysql.createConnection({
-            host : '127.0.0.1',
-            user : 'root',
-            password : '1234',
-            database : 'luiz_barros'
-        });
+    app.get('/projetos', function(req, res){       
 
         connection.query('select * from projetos', function(error, result){
             res.render("projetos/projetos", {projetos : result});
